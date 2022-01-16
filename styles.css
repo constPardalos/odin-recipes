@@ -60,13 +60,13 @@ h1 {
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   line-height: 1.4;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   line-height: 1.5;
 }
@@ -74,25 +74,20 @@ h3 {
 hr {
   background: #d6ccc2;
   border: none;
-  margin: 15px 0;
-  height: 1px;
-}
-
-.main-header,
-.main-content,
-.main-footer {
-  padding: 0 15px;
+  margin: 20px 0;
+  height: 0.5px;
 }
 
 .main-header .flex-container,
 .main-content .main-container,
 .main-footer .flex-container {
   margin: 0 auto;
+  padding: 0 15px;
   max-width: 1160px;
 }
 
-.main-content .main-container {
-  margin: 50px auto;
+.main-content section {
+  margin-bottom: 40px;
 }
 
 /* HEADER
@@ -102,7 +97,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 75px;
+  min-height: 90px;
 }
 
 /* Logo */
@@ -243,58 +238,221 @@ a.copy {
 /* HOME PAGE
 =============================*/
 
-.recipe-list {
+.home-page .main-content {
+  margin: 0 0 40px 0;
+}
+
+.section-header {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  display: inline-block;
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 0 20px;
+  line-height: 1;
+}
+
+.section-header hr {
+  width: 100%;
+}
+
+/* Hero Section */
+
+.hero {
+  background: #101417 url('../images/hero-img.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 0 auto;
+  padding: 60px 0px;
+  max-width: 1920px;
+  min-height: 350px;
+  text-align: center;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero .subtitle {
+  max-width: 60%;
+}
+
+.hero .quote {
+  display: block;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.hero .author {
+  font-size: 14px;
+  font-style: italic;
+}
+
+/* Tip of the day */
+
+.tip {
+  border: 1px solid #b08968;
+  position: relative;
+}
+
+.tip h2 {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -25px 0 0 -100px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  line-height: 1;
+  width: 200px;
+  height: 50px;
+  z-index: 1;
+}
+
+.tip-content {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.tip h3 {
+}
+
+.tip p {
+  font-size: 20px;
+}
+
+/* Recipe Cards */
+
+.grid-view {
+  display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: stretch;
   list-style-type: none;
+  gap: 3%;
+  width: 100%;
 }
 
-.recipe-list li {
-  flex: 1 1 auto;
-  margin: 10px;
+.grid-view .card-container {
+  flex: 1 1 30%;
+  margin-bottom: 10px;
+  height: 100%;
 }
 
-.recipe-list a {
+.card {
   background: #fff;
-  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
-  display: block;
-  font-size: 20px;
-  font-weight: 400;
-  max-width: 300px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
   transition: all 0.2s linear;
-  width: 100%;
 }
 
-.recipe-list a:hover {
-  /* box-shadow: -5px 5px 0px rgba(0, 0, 0, 0.4); */
+.card-image {
+  position: relative;
+  max-height: 450px;
+  min-width: 160px;
+  height: 100%;
+  overflow: hidden;
+  transition: all .15s linear;
 }
 
-.recipe-list img {
-  width: 100%;
+.recipe-image {
+  display: block;
+  opacity: 1;
+  position: relative;
+  height: 100%;
   transition: inherit;
 }
 
-.recipe-list a:hover img {
+.card:hover .recipe-image {
+  opacity: 0.7;
   transform: scale(1.1);
 }
 
-.recipe-list span {
+.card-view-btn {
   background: #fff;
-  display: block;
-  padding: 15px;
-
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: -30px 0 0 -60px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 60px;
+  transition: inherit;
 }
+
+.card-view-btn:before {
+  border: 2px solid #fff;
+  content: "";
+  position: absolute;
+  width: 124px;
+  height: 64px;
+}
+
+.card:hover .card-view-btn {
+  opacity: 1;
+}
+
+.card-info {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  color: #b08968;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  margin: 5px 0;
+  text-transform: uppercase;
+}
+
+.card-info span {
+  display: flex;
+  align-items: center;
+}
+
+.card-info img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.card-title {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0;
+  transition: inherit;
+}
+
+.card:hover .card-title {
+  color: #b08968;
+}
+
 
 /* RECIPE PAGE
 =============================*/
+
+.recipe-page .main-content {
+  margin: 40px 0;
+}
 
 .recipe .flex-container {
   display: flex;
@@ -307,10 +465,6 @@ a.copy {
 
 .recipe .main-block {
   flex: 1 1 60%;
-}
-
-.recipe section {
-  margin-bottom: 20px;
 }
 
 /* Breadcrumbs */
@@ -394,8 +548,10 @@ a.copy {
 }
 
 .recipe-title span {
+  display: block;
   color: #b08968;
-  margin: 15px 0;
+  font-size: 16px;
+  margin: 5px 0 15px 0;
   text-transform: uppercase;
 }
 
@@ -404,6 +560,7 @@ a.copy {
 .tags {
   display: flex;
   gap: 10px;
+  margin: 10px 0;
 }
 
 .tag {
@@ -414,7 +571,6 @@ a.copy {
   letter-spacing: 1px;
   text-transform: uppercase;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
-  margin: 10px 0;
   padding: 5px 15px;
 }
 
@@ -529,6 +685,8 @@ a.copy {
 
 @media only screen and (max-width: 760px) {
 
+  /* Header */
+
   .main-header .flex-container {
     flex-direction: column;
   }
@@ -537,6 +695,10 @@ a.copy {
     flex-direction: column;
     font-size: 20px;
     margin-top: 20px;
+  }
+
+  .main-header .logo svg {
+    height: 75px;
   }
 
   .main-header .logo span {
@@ -560,9 +722,31 @@ a.copy {
     padding: 5px 10px;
   }
 
-  .breadcrumbs ul {
+  /* Home */
+  
+  .grid-view .card-container {
+    flex: 1 1 47%;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .card-info {
     justify-content: center;
   }
+
+  .breadcrumbs ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumbs li:last-of-type {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  /* Recipe */
 
   .recipe .flex-container {
     display: flex;
@@ -577,10 +761,6 @@ a.copy {
 
   .recipe .main-block {
     flex: 1 1 auto;
-  }
-
-  .recipe section {
-    margin-bottom: 40px;
   }
 
   .tags {
@@ -611,11 +791,12 @@ a.copy {
   .steps li::before {
     background: #fff;
     display: block;
-    margin:0 0 10px -20px;
+    font-size: 26px;
+    margin:0 0 10px -25px;
     position: relative;
     left: 50%;
     text-align: center;
-    width: 40px;
+    width: 50px;
     z-index: 2;
   }
 
