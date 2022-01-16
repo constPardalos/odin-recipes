@@ -19,13 +19,8 @@ body {
   font-size: 17px;
   font-family: "Source Serif Pro", serif;
   line-height: 1.7;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
-}
-
-main {
-  margin: 50px auto;
-  padding: 0 15px;
-  max-width: 1160px;
 }
 
 img {
@@ -55,7 +50,7 @@ h4,
 h5,
 h6 {
   font-family: "Source Serif Pro", serif;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.8em;
 }
 
 h1 {
@@ -77,24 +72,36 @@ h3 {
 }
 
 hr {
-  background: #ede0d4;
+  background: #d6ccc2;
   border: none;
   margin: 15px 0;
   height: 1px;
 }
 
+.main-header,
+.main-content,
+.main-footer {
+  padding: 0 15px;
+}
+
+.main-header .flex-container,
+.main-content .main-container,
+.main-footer .flex-container {
+  margin: 0 auto;
+  max-width: 1160px;
+}
+
+.main-content .main-container {
+  margin: 50px auto;
+}
+
 /* HEADER
 =============================*/
-
-.main-header {
-}
 
 .main-header .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  max-width: 1160px;
   min-height: 75px;
 }
 
@@ -162,6 +169,77 @@ hr {
   color: #fff;
 }
 
+/* FOOTER
+=============================*/
+
+.main-footer .flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-logo-header hr {
+  width: 100%;
+}
+
+/* Logo */
+
+.main-footer {
+  font-family: "Montserrat", sans-serif;
+  padding-bottom: 40px;
+}
+
+.footer-logo {
+  flex: 1 0 auto;
+  margin: 10px 20px;
+  text-align: center;
+}
+
+.footer-logo svg {
+  fill: #d6ccc2;
+  margin: 0;
+  height: 55px;
+}
+
+/* Navigation */
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-nav li {
+  margin: 10px 5px;
+}
+
+.footer-nav a {
+  color: #1c1c1c;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.15s linear;
+}
+
+.footer-nav a:hover {
+  color: #d6ccc2;
+}
+
+a.copy {
+  color: #d6ccc2;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 /* HOME PAGE
 =============================*/
 
@@ -224,11 +302,11 @@ hr {
 }
 
 .recipe .side-block {
-  flex: 1 1 30%;
+  flex: 1 1 40%;
 }
 
 .recipe .main-block {
-  flex: 1 1 70%;
+  flex: 1 1 60%;
 }
 
 .recipe section {
@@ -278,15 +356,16 @@ hr {
 /* Recipe Image */
 
 .recipe-image {
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   line-height: 0;
   position: relative;
-  height: 100%;
+  width: 100%;
+  max-width: 500px;
 }
 
 .recipe-image img {
-  height: 100%;
   position: relative;
+  width: 100%;
 }
 
 .recipe-image a {
@@ -409,17 +488,21 @@ hr {
   border-bottom: 1px solid #b08968;
 }
 
-.nutrition .percent {
+/* Ingredients */
+
+.ingredients li {
+  margin-bottom: 10px;
+  min-height: 30px;
 }
 
-/* Recipe Side */
+/* Steps */
 
-.recipe-main ol {
+.steps {
   list-style: none;
   counter-reset: steps-counter;
 }
 
-.recipe-main ol li {
+.steps li {
   counter-increment: steps-counter;
   margin-bottom: 10px;
   padding-left: 42px;
@@ -427,7 +510,7 @@ hr {
   min-height: 30px;
 }
 
-.recipe-main ol li::before {
+.steps li::before {
   content: counter(steps-counter) "";
   color: #ddb892;
   font-size: 22px;
@@ -439,4 +522,111 @@ hr {
   left: 0;
   text-align: right;
   width: 30px;
+}
+
+/* MEDIA QUERIES
+=============================*/
+
+@media only screen and (max-width: 760px) {
+
+  .main-header .flex-container {
+    flex-direction: column;
+  }
+
+  .main-header .logo {
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+
+  .main-header .logo span {
+    padding: 0;
+  }
+
+  .main-header .main-nav {
+    margin: 10px 0;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .main-nav li {
+    margin: 10px 5px;
+  }
+
+  .main-nav a {
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+
+  .breadcrumbs ul {
+    justify-content: center;
+  }
+
+  .recipe .flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+  }
+
+  .recipe .side-block {
+    flex: 1 1 auto;
+  }
+
+  .recipe .main-block {
+    flex: 1 1 auto;
+  }
+
+  .recipe section {
+    margin-bottom: 40px;
+  }
+
+  .tags {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .quick-info {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .nutrition {
+    flex-wrap: wrap;
+  }
+
+  .nutrition li {
+    flex: 1 0 20%;
+    width: 80px;
+  }
+
+  .steps li {
+    margin: 0 auto 10px auto;
+    padding: 0;
+    max-width: 500px;
+  }
+
+  .steps li::before {
+    background: #fff;
+    display: block;
+    margin:0 0 10px -20px;
+    position: relative;
+    left: 50%;
+    text-align: center;
+    width: 40px;
+    z-index: 2;
+  }
+
+  .steps li::after {
+    background: #d6ccc2;
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 0.5px;
+    z-index: 1;
+  }
 }
