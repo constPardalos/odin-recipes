@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #fdfdfc;
   color: #303030;
   font-size: 17px;
   font-family: "Source Serif Pro", serif;
@@ -71,8 +71,12 @@ h3 {
   line-height: 1.5;
 }
 
+p {
+  margin-bottom: 20px;
+}
+
 hr {
-  background: #d6ccc2;
+  background: #b08968;
   border: none;
   margin: 20px 0;
   height: 0.5px;
@@ -86,8 +90,45 @@ hr {
   max-width: 1160px;
 }
 
+.main-content {
+  margin: 40px 0;
+}
+
 .main-content section {
   margin-bottom: 40px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h1,
+.section-header h2 {
+  display: inline-block;
+  flex: 1 0 auto;
+  margin: 0;
+  padding: 0 20px;
+  line-height: 1;
+}
+
+.section-header hr {
+  width: 100%;
+}
+
+.about-content {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.about-content a {
+  font-weight: 600;
+}
+
+.about-content a:hover {
+  text-decoration: underline;
 }
 
 /* HEADER
@@ -199,7 +240,7 @@ hr {
 }
 
 .footer-logo svg {
-  fill: #d6ccc2;
+  fill: #b08968;
   margin: 0;
   height: 55px;
 }
@@ -226,11 +267,11 @@ hr {
 }
 
 .footer-nav a:hover {
-  color: #d6ccc2;
+  color: #b08968;
 }
 
 a.copy {
-  color: #d6ccc2;
+  color: #b08968;
   font-size: 14px;
   font-weight: 500;
 }
@@ -242,29 +283,10 @@ a.copy {
   margin: 0 0 40px 0;
 }
 
-.section-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.section-header h2 {
-  display: inline-block;
-  flex: 1 0 auto;
-  margin: 0;
-  padding: 0 20px;
-  line-height: 1;
-}
-
-.section-header hr {
-  width: 100%;
-}
-
 /* Hero Section */
 
 .hero {
-  background: #101417 url('../images/hero-img.jpg') center/cover no-repeat;
+  background: #101417 url("../images/hero-img.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -307,7 +329,7 @@ a.copy {
 }
 
 .tip h2 {
-  background: #fff;
+  background: #fdfdfc;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,9 +348,6 @@ a.copy {
   padding: 20px;
   max-width: 600px;
   text-align: center;
-}
-
-.tip h3 {
 }
 
 .tip p {
@@ -364,7 +383,7 @@ a.copy {
   min-width: 160px;
   height: 100%;
   overflow: hidden;
-  transition: all .15s linear;
+  transition: all 0.15s linear;
 }
 
 .recipe-image {
@@ -446,13 +465,8 @@ a.copy {
   color: #b08968;
 }
 
-
 /* RECIPE PAGE
 =============================*/
-
-.recipe-page .main-content {
-  margin: 40px 0;
-}
 
 .recipe .flex-container {
   display: flex;
@@ -523,7 +537,7 @@ a.copy {
 }
 
 .recipe-image a {
-  background: #fff;
+  background: #fdfdfc;
   padding: 5px;
   position: absolute;
   right: 0;
@@ -574,20 +588,12 @@ a.copy {
   padding: 5px 15px;
 }
 
-.tag.petrol {
-  background-color: #264653;
-}
-
 .tag.teal {
   background-color: #2a9d8f;
 }
 
 .tag.gold {
   background-color: #e9c46a;
-}
-
-.tag.orange {
-  background-color: #f4a261;
 }
 
 .tag.red {
@@ -603,14 +609,11 @@ a.copy {
 
 .quick-info {
   display: flex;
+  gap: 15px;
   font-size: 13px;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-}
-
-.quick-info li {
-  margin-right: 15px;
 }
 
 .quick-info li span {
@@ -651,6 +654,12 @@ a.copy {
   min-height: 30px;
 }
 
+.ingredients li.list-subtitle {
+  color: #b08968;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
 /* Steps */
 
 .steps {
@@ -668,7 +677,7 @@ a.copy {
 
 .steps li::before {
   content: counter(steps-counter) "";
-  color: #ddb892;
+  color: #b08968;
   font-size: 22px;
   font-weight: bold;
   font-family: "Merriweather", serif;
@@ -684,7 +693,6 @@ a.copy {
 =============================*/
 
 @media only screen and (max-width: 760px) {
-
   /* Header */
 
   .main-header .flex-container {
@@ -723,7 +731,7 @@ a.copy {
   }
 
   /* Home */
-  
+
   .grid-view .card-container {
     flex: 1 1 47%;
   }
@@ -789,10 +797,10 @@ a.copy {
   }
 
   .steps li::before {
-    background: #fff;
+    background: #fdfdfc;
     display: block;
     font-size: 26px;
-    margin:0 0 10px -25px;
+    margin: 0 0 10px -25px;
     position: relative;
     left: 50%;
     text-align: center;
@@ -801,7 +809,7 @@ a.copy {
   }
 
   .steps li::after {
-    background: #d6ccc2;
+    background: #b08968;
     content: "";
     position: absolute;
     top: 15px;
@@ -809,5 +817,10 @@ a.copy {
     width: 100%;
     height: 0.5px;
     z-index: 1;
+  }
+
+  .about-content h2,
+  .about-content ul {
+    text-align: center;
   }
 }
