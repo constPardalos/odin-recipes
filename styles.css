@@ -286,7 +286,7 @@ a.copy {
 /* Hero Section */
 
 .hero {
-  background: #101417 url("/images/hero-img.jpg") center/cover no-repeat;
+  background: #101417 url("images/hero-img.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
