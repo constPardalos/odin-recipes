@@ -270,10 +270,31 @@ hr {
   color: #b08968;
 }
 
-a.copy {
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
   color: #b08968;
   font-size: 14px;
   font-weight: 500;
+}
+
+.author span {
+  display: block;
+}
+
+.author svg {
+  display: inline;
+  fill: #b08968;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  transition: .1s;
+}
+
+.author:hover svg {
+  fill: #ddb892;
 }
 
 /* HOME PAGE
@@ -293,11 +314,11 @@ a.copy {
   align-items: center;
   color: #fff;
   margin: 0 auto;
-  padding: 60px 0px;
+  padding: 60px 0;
   max-width: 1920px;
   min-height: 350px;
   text-align: center;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .hero h1 {
@@ -584,7 +605,7 @@ a.copy {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
   padding: 5px 15px;
 }
 
