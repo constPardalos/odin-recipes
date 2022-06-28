@@ -1,4 +1,4 @@
-# <img src="/images/favicon.png" width="22"/> Odin Recipes
+# <img src="images/favicon.png" width="22"/> Odin Recipes
 
 [Live Demo](https://thecolordude.github.io/odin-recipes/)
 
@@ -10,13 +10,18 @@ The purpose of this assignment is to build a simple HTML page that includes link
 
 The data in this project may not be accurate and is duplicated throughout the pages. For more accurate information please check the sources listed below.
 
-<img src="/images/preview.png" />
+<img src="images/preview.png" />
 
 ## Languages & Tools
 
 The following were used for the creation of this project:
 
-<img src="https://github.com/theColorDude/theColorDude/blob/main/assets/html5-original.svg" width="100" title="HTML5" /> <img src="https://github.com/theColorDude/theColorDude/blob/main/assets/css3-original.svg" width="100" title="CSS3" /> <img src="https://github.com/theColorDude/theColorDude/blob/main/assets/vscode-original.svg" width="100" title="VSCode" /> <img src="https://github.com/theColorDude/theColorDude/blob/main/assets/illustrator-plain.svg" width="100" title="Illustrator" />
+<p>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="60" title="HTML5" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="60" title="CSS3" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="60" title="Webstorm" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" width="60" title="Illustrator" />
+</p>
 
 ## Resources
 
