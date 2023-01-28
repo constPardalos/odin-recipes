@@ -1,6 +1,6 @@
 # <img src="images/favicon.png" width="22"/> Odin Recipes
 
-[Live Demo](https://thecolordude.github.io/odin-recipes/)
+[Live Demo](https://constPardalos.github.io/odin-recipes/)
 
 ## Description
 
